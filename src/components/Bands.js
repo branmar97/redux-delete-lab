@@ -4,17 +4,15 @@ import { connect } from 'react-redux'
 
 const Bands = ({ bands }) => {
     renderBands = () => {
-        bands.map(band => <Band id={band.id} name={band.text} />)
+        bands.map(band => <Band key={band.id} {...band} deleteBand={props.deleteBand}/>)
     }
     
     return ( 
-        <ul>
+        <div>
             {this.renderBands()}
-        </ul>
+        </div>>
      );
 }
- 
-const mapStateToProps = ({ bands }) => ({ bands })
 
 
 export default connect(mapStateToProps)(Bands);
