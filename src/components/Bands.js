@@ -1,6 +1,5 @@
 import React from 'react';
 import Band from './Band';
-import { connect } from 'react-redux'
 
 const Bands = ({ bands }) => {
     renderBands = () => {
@@ -15,4 +14,4 @@ const Bands = ({ bands }) => {
 }
 
 
-export default connect(mapStateToProps)(Bands);
+export default Bands;
